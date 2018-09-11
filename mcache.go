@@ -1,7 +1,7 @@
 package floodsub
 
 import (
-	pb "github.com/libp2p/go-floodsub/pb"
+	pb "github.com/dms3-p2p/go-floodsub/pb"
 )
 
 func NewMessageCache(gossip, history int) *MessageCache {

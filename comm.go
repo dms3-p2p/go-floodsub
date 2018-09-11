@@ -5,11 +5,11 @@ import (
 	"context"
 	"io"
 
-	pb "github.com/libp2p/go-floodsub/pb"
+	pb "github.com/dms3-p2p/go-floodsub/pb"
 
 	ggio "github.com/gogo/protobuf/io"
 	proto "github.com/gogo/protobuf/proto"
-	inet "github.com/libp2p/go-libp2p-net"
+	inet "github.com/dms3-p2p/go-p2p-net"
 )
 
 // get the initial RPC containing all of our subscriptions to send to new peers

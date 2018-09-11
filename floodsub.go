@@ -3,11 +3,11 @@ package floodsub
 import (
 	"context"
 
-	pb "github.com/libp2p/go-floodsub/pb"
+	pb "github.com/dms3-p2p/go-floodsub/pb"
 
-	host "github.com/libp2p/go-libp2p-host"
-	peer "github.com/libp2p/go-libp2p-peer"
-	protocol "github.com/libp2p/go-libp2p-protocol"
+	host "github.com/dms3-p2p/go-p2p-host"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	protocol "github.com/dms3-p2p/go-p2p-protocol"
 )
 
 const (

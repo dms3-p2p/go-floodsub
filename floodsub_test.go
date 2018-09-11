@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	host "github.com/libp2p/go-libp2p-host"
-	peer "github.com/libp2p/go-libp2p-peer"
-	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	//bhost "github.com/libp2p/go-libp2p/p2p/host/basic"
-	bhost "github.com/libp2p/go-libp2p-blankhost"
-	"github.com/libp2p/go-libp2p-protocol"
+	host "github.com/dms3-p2p/go-p2p-host"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	swarmt "github.com/dms3-p2p/go-p2p-swarm/testing"
+	//bhost "github.com/dms3-p2p/go-p2p/p2p/host/basic"
+	bhost "github.com/dms3-p2p/go-p2p-blankhost"
+	"github.com/dms3-p2p/go-p2p-protocol"
 )
 
 func checkMessageRouting(t *testing.T, topic string, pubs []*PubSub, subs []*Subscription) {
@@ -776,7 +776,7 @@ func TestPeerTopicReporting(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	_, err = psubs[2].Subscribe("ipfs")
+	_, err = psubs[2].Subscribe("dms3fs")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -785,14 +785,14 @@ func TestPeerTopicReporting(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	_, err = psubs[3].Subscribe("ipfs")
+	_, err = psubs[3].Subscribe("dms3fs")
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	time.Sleep(time.Millisecond * 10)
 
-	peers := psubs[0].ListPeers("ipfs")
+	peers := psubs[0].ListPeers("dms3fs")
 	assertPeerList(t, peers, hosts[2].ID(), hosts[3].ID())
 
 	peers = psubs[0].ListPeers("foo")

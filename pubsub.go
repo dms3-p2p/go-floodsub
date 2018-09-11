@@ -8,13 +8,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	pb "github.com/libp2p/go-floodsub/pb"
+	pb "github.com/dms3-p2p/go-floodsub/pb"
 
-	logging "github.com/ipfs/go-log"
-	host "github.com/libp2p/go-libp2p-host"
-	inet "github.com/libp2p/go-libp2p-net"
-	peer "github.com/libp2p/go-libp2p-peer"
-	protocol "github.com/libp2p/go-libp2p-protocol"
+	logging "github.com/dms3-fs/go-log"
+	host "github.com/dms3-p2p/go-p2p-host"
+	inet "github.com/dms3-p2p/go-p2p-net"
+	peer "github.com/dms3-p2p/go-p2p-peer"
+	protocol "github.com/dms3-p2p/go-p2p-protocol"
 	timecache "github.com/whyrusleeping/timecache"
 )
 
